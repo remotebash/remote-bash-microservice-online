@@ -13,6 +13,9 @@ app.use(bodyParser.urlencoded({     // to support URL-encoded bodies
 //   banco.salvarStatus(req.body)
 //   res.end();
 // })
+app.get('', function (req,res){
+  res.end("olá bb");
+})
 app.get('/status/:id', function (req, res) {
   // banco.pegarStatus(req.params).then(x=>{
   //   res.end(x);
