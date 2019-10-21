@@ -13,6 +13,9 @@ app.post('/maquina', function (req, res) {
   banco.salvarStatus(req.body)
   res.end();
 })
+app.get('', (req,res=>{
+  res.end("Aplication Up!");
+}))
 app.get('/status/:id', function (req, res) {
   banco.pegarStatus(req.params).then(x=>{
     res.end(x);
