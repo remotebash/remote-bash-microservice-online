@@ -22,5 +22,5 @@ app.get('/status/:id', function (req, res) {
   })
 })
 
-app.listen(process.env.PORT)
+app.listen(8080)
 console.log("Main server runing on Port:" + 8080);

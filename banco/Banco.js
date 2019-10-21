@@ -39,15 +39,22 @@ module.exports = {
             query.exec(function (err, retorno) {
                 if (err) return handleError(err);
                 // Prints "Space Ghost is a talk show host."
-                if(data.getTime() - retorno.data < 12000){
+                if(retorno){
+                    if(data.getTime() - retorno.data < 12000){
+                        resolve(JSON.stringify({
+                            'id' : maquina.id,
+                            'status' : "online"
+                        }))
+                    } else {
+                        resolve(JSON.stringify({
+                            'id' : maquina.id,
+                            'status' : "offline"
+                        }))
+                    }
+                } else{
                     resolve(JSON.stringify({
                         'id' : maquina.id,
-                        'status' : "online"
-                    }))
-                } else {
-                    resolve(JSON.stringify({
-                        'id' : maquina.id,
-                        'status' : "offline"
+                        'status' : "Not found"
                     }))
                 }
                 

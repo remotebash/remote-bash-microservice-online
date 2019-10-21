@@ -1,5 +1,5 @@
 var querystring = require('querystring');
-var https = require('https');
+var http = require('http');
 
 module.exports= {
     sendPost: (codestring) => {
@@ -13,7 +13,7 @@ module.exports= {
     
     // An object of options to indicate where to post to
     var post_options = {
-        host: 'remotebash.herokuapp.',
+        host: 'localhost',
         port: '8080',
         path: '/maquina',
         method: 'POST',
@@ -24,7 +24,7 @@ module.exports= {
     };
     
     // Set up the request
-    var post_req = https.request(post_options, function(res) {
+    var post_req = http.request(post_options, function(res) {
         res.setEncoding('utf8');
         res.on('data', function (chunk) {
             console.log('Response: ' + chunk);
