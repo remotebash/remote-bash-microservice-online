@@ -56,7 +56,7 @@ module.exports = {
     })
 }
 //Ta no grupo
-var pass = "XXXXXX";
+var pass = "KlovisBash";
 pass = encodeURIComponent(pass)
 
 Mongoose.connect('mongodb+srv://RemoteSkeletom:' + pass + '@remotebash-9meuu.mongodb.net/test?retryWrites=true&w=majority');
