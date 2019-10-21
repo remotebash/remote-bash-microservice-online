@@ -1,7 +1,7 @@
 const express = require('express')
 const app = express()
 const banco = require('./banco/Banco')
-const send = require('./Send')
+//const send = require('./Send')
 
 var bodyParser = require('body-parser')
 app.use( bodyParser.json() );       // to support JSON-encoded bodies
@@ -22,5 +22,5 @@ app.get('/status/:id', function (req, res) {
   })
 })
 
-app.listen(8080)
+app.listen(process.env.PORT)
 console.log("Main server runing on Port:" + 8080);
