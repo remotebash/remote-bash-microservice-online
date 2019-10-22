@@ -1,5 +1,11 @@
 var Mongoose = require('Mongoose');
 
+//Ta no grupo
+var pass = "KlovisBash";
+pass = encodeURIComponent(pass)
+
+Mongoose.connect('mongodb+srv://RemoteSkeletom:' + pass + '@remotebash-9meuu.mongodb.net/test?retryWrites=true&w=majority');
+
 var db = Mongoose.connection;
 
 db.on('error', console.error);
@@ -62,10 +68,5 @@ module.exports = {
         })
     })
 }
-//Ta no grupo
-var pass = "KlovisBash";
-pass = encodeURIComponent(pass)
-
-Mongoose.connect('mongodb+srv://RemoteSkeletom:' + pass + '@remotebash-9meuu.mongodb.net/test?retryWrites=true&w=majority');
 
 
