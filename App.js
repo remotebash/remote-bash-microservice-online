@@ -1,6 +1,6 @@
 const express = require('express')
 const app = express()
-//const banco = require('./banco/Banco')
+const banco = require('./banco/Banco')
 
 
 var bodyParser = require('body-parser')
@@ -10,16 +10,16 @@ app.use(bodyParser.urlencoded({     // to support URL-encoded bodies
 })); 
 
 app.post('/maquina', function (req, res) {
-  //banco.salvarStatus(req.body)
+  banco.salvarStatus(req.body)
   res.end();
 })
 app.get('', (req,res)=>{
   res.end("Aplication Up! on:" + process.env.PORT);
 })
 app.get('/status/:id', function (req, res) {
-  //banco.pegarStatus(req.params).then(x=>{
-  // res.end(x);
-  //})
+  banco.pegarStatus(req.params).then(x=>{
+  res.end(x);
+  })
 })
 
 app.listen(process.env.PORT)
