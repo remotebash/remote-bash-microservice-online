@@ -1,4 +1,4 @@
-var Mongoose = require('Mongoose');
+var Mongoose = require('mongoose');
 
 //Ta no grupo
 var pass = "KlovisBash";
