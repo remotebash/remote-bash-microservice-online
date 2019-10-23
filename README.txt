@@ -1,19 +1,19 @@
-Enviar POST para localhost:8080/maquina
+Enviar POST para https://remotebash.herokuapp.com/maquina
 com um objeto json seguindo o exemplo a baixo
 {
   "id" : "1234456"
 }
 para salvar a maquina como online
-Enviar um GET para localhost:8080/status/:id
-Exemplo : localhost:8080/status/1234456
+Enviar um GET para https://remotebash.herokuapp.com/status/:id
+Exemplo : https://remotebash.herokuapp.com/status/1234456
 Caso ele tenha seido slavo como online dentro de 2 min,
-Retornará um json afirmando status online
+Retornarï¿½ um json afirmando status online
 Exemplo: 
 {
   "id":"1234456",
   "status":"online"
 }
-Caso não tenha sido salvo dentro de 2 min,
+Caso nï¿½o tenha sido salvo dentro de 2 min,
 {
   "id":"1234456",
   "status":"offline"
