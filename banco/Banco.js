@@ -1,7 +1,7 @@
 var Mongoose = require('mongoose');
 
 //Ta no grupo
-var pass = "KlovisBash";
+var pass = process.env.MONGO_PASS;
 pass = encodeURIComponent(pass)
 
 Mongoose.connect('mongodb+srv://RemoteSkeletom:' + pass + '@remotebash-9meuu.mongodb.net/test?retryWrites=true&w=majority');
