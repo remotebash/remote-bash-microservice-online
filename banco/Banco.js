@@ -46,7 +46,7 @@ module.exports = {
                 if (err) return handleError(err);
                 // Prints "Space Ghost is a talk show host."
                 if(retorno){
-                    if(data.getTime() - retorno.data < 12000){
+                    if(data.getTime() - retorno.data < 120000){
                         resolve(JSON.stringify({
                             'id' : maquina.id,
                             'status' : "online"
